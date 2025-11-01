@@ -1,78 +1,80 @@
-[![Actions Status](https://github.com/luczeng/MotionBlur/workflows/Python%20package/badge.svg)](https://github.com/luczeng/MotionBlur/actions)
+[README.md]
 
-# Description
-This project aims at removing motion blur originating from the motion or shake of hand-held cameras. It aims to work blindly, ie no knowledge of the blur is required. The motion blur is estimated using a convolutional neural network, and is later used to calibrate a deconvolution algorithm.  
+# Motion-Blur
 
-The project consists of two distinct parts:    
-	- the image processing section, with the deconvolution algorithms and the forward models.  
-	- the blur estimation section using a neural network.  
+<p align="center">
+  <a href="https://github.com/whisprer/motion-blur/releases"> 
+    <img src="https://img.shields.io/github/v/release/whisprer/motion-blur?color=4CAF50&label=release" alt="Release Version"> 
+  </a>
+  <a href="https://github.com/whisprer/motion-blur/actions"> 
+    <img src="https://img.shields.io/github/actions/workflow/status/whisprer/motion-blur/lint-and-plot.yml?label=build" alt="Build Status"> 
+  </a>
+</p>
 
-See the **[wiki](https://github.com/luczeng/MotionBlur/wiki)** for some visual insights.  
+![Commits](https://img.shields.io/github/commit-activity/m/whisprer/motion-blur?label=commits) 
+![Last Commit](https://img.shields.io/github/last-commit/whisprer/motion-blur) 
+![Issues](https://img.shields.io/github/issues/whisprer/motion-blur) 
+[![Version](https://img.shields.io/badge/version-3.1.1-blue.svg)](https://github.com/whisprer/motion-blur) 
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-lightgrey.svg)](https://www.microsoft.com/windows)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-The library is coded in Python3.
+<p align="center">
+  <img src="motion-blur-banner.png" width="850" alt="Motion-Blur Banner"> 
+</p>
 
-Contributions are more than welcome, either on on the image processing (modeling of complex blurs) or the blur estimation.
 
-![alt text](imgs/Reds_deconv.png)
+---
 
-# News
-- As of May 2020, the project restarts! We move from tensorflow to pytorch. We will extend the motion blur models to more complicated motions than simply linear movements. We will also tackle the space variant case. We plan to extend to TV deblurring. 
+[README.md]
 
-# Progress
-- As of now (May 2020), we support deblurring of *linear blurs* using a Wiener filter.
+# Motion-Blur
 
-# Installation
-In your favorite conda environment, type:  
-  
-~~~
-    pip install -e .
-~~~
+<p align="center">
+  <a href="https://github.com/whisprer/motion-blur/releases"> 
+    <img src="https://img.shields.io/github/v/release/whisprer/motion-blur?color=4CAF50&label=release" alt="Release Version"> 
+  </a>
+  <a href="https://github.com/whisprer/motion-blur/actions"> 
+    <img src="https://img.shields.io/github/actions/workflow/status/whisprer/motion-blur/lint-and-plot.yml?label=build" alt="Build Status"> 
+  </a>
+</p>
 
-For development, install the test libraries as follow:
+![Commits](https://img.shields.io/github/commit-activity/m/whisprer/motion-blur?label=commits) 
+![Last Commit](https://img.shields.io/github/last-commit/whisprer/motion-blur) 
+![Issues](https://img.shields.io/github/issues/whisprer/motion-blur) 
+[![Version](https://img.shields.io/badge/version-3.1.1-blue.svg)](https://github.com/whisprer/motion-blur) 
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-lightgrey.svg)](https://www.microsoft.com/windows)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-~~~
-    pip install -e ".[TEST_SUITE,DEVELOP]"
-~~~
+<p align="center">
+  <img src="motion-blur-banner.png" width="850" alt="Motion-Blur Banner"> 
+</p>
 
-# Content details
-## Forward model
-- The linear kernel is obtained by integrating a line over one pixel so as to take into account discretization effects.
-- The deconvolution is a Wiener filter. We plan to add a TV deconvolution.
 
-## Learning
-- Data and training:  WIP
-- Training data is randomly generated on the fly using the forward model. The validation set is generated offline.
-- Training is online gradient descent
+---
 
-## Implementation details
-- We use Torch and python3. For managing learning runs, we use mlflow with Neptune.
+[README.md]
 
-# Usage
-- For inference, edit or copy the configuration file in libs/configs and run:  
+# MotionBlur
 
- 
-```
-    python driver_scripts/main_inference.py -i path_to_config.yml
-```
-- Training: TBD
-```
-    python driver_scripts/main_train.py -i path_to_config.yml
-```
+<p align="center">
+  <a href="https://github.com/whisprer/MotionBlur/releases"> 
+    <img src="https://img.shields.io/github/v/release/whisprer/MotionBlur?color=4CAF50&label=release" alt="Release Version"> 
+  </a>
+  <a href="https://github.com/whisprer/MotionBlur/actions"> 
+    <img src="https://img.shields.io/github/actions/workflow/status/whisprer/MotionBlur/lint-and-plot.yml?label=build" alt="Build Status"> 
+  </a>
+</p>
 
-Nota bene: I plan to upload the weights soon.
+![Commits](https://img.shields.io/github/commit-activity/m/whisprer/MotionBlur?label=commits) 
+![Last Commit](https://img.shields.io/github/last-commit/whisprer/MotionBlur) 
+![Issues](https://img.shields.io/github/issues/whisprer/MotionBlur) 
+[![Version](https://img.shields.io/badge/version-3.1.1-blue.svg)](https://github.com/whisprer/MotionBlur) 
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-lightgrey.svg)](https://www.microsoft.com/windows)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-# Datasets
-
-We currently use the REDS (or GOPRO) dataset for training. If you know any dataset consisting of sharp images, please let
-me know!
-
-# Contributing
-I use Black with line length 120. Please write unit tests (pytest) for your code. Please use the
-[git-flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) development
-process.
-
-# Performance
-- Visual performance of the linear motion blur regression (latest results):
-
-|![alt text](imgs/linear_motion_blur_perfomance_theta.png)             |![alt text](imgs/linear_motion_blur_perfomance_length.png) 
-| ------------- |:-------------:|
+<p align="center">
+  <img src="MotionBlur-banner.png" width="850" alt="MotionBlur Banner"> 
+</p>
